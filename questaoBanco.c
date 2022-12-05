@@ -31,9 +31,8 @@ void imprime(contaBancaria conta) {
 int main() {
   contaBancaria conta;
   int opcao;
-  int parar;
   do {
-    printf("\nDentre as operacoes:\n1-Inicializar Conta\n2-Depositar\n3-Sacar\n4-Imprimrir\nEscolha um valor:");
+    printf("\nDentre as operacoes:\n1-Inicializar Conta\n2-Depositar\n3-Sacar\n4-Imprimrir\n5-Sair\nEscolha um valor:");
     scanf("%d", &opcao);
     switch (opcao) {
     case 1:
@@ -52,15 +51,15 @@ int main() {
     case 4:
       imprime(conta);
       break;
-
+        
+    case 5:
+       printf("\nSaída executada!\n");
+       break;
+        
     default:
       printf("\nValor invalido!\n");
     }
-    printf("\nDigite 1 para continuar e 0 para parar:\n");
-    scanf("%d", &parar);
-    if (parar == 0) {
-      printf("Parada executada!");
-    }
-  } while (parar != 0);
+    
+  } while (opcao != 5);
   return 0;
 }
